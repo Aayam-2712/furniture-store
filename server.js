@@ -229,8 +229,7 @@ app.post("/login", (req, res) => {
 app.get("/products/:category", (req, res) => {
     let category = req.params.category;
     console.log(category);
-    let copyArr = furnitures;
-    copyArr = copyArr.filter((obj) => obj.category === category);
+    let copyArr = furnitures.filter((obj) => obj.category === category);
     res.send(copyArr);
 });
 
